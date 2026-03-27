@@ -1,143 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - Gilmar Gomes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="header-info">
-      <h1 class="logo">Gilmar Gomes</h1>
-      <p class="subtitle">19 anos | Estudante de Engenharia de Computação</p>
-    </div>
-    <nav class="nav">
-      <a href="#linguagens">Linguagens</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <button class="btn-toggle" aria-label="Abrir menu">☰</button>
-  </header>
-
-  <main>
-    <!-- Seção Hero -->
-    <section id="hero" class="hero">
-      <h2 class="typewriter" data-aos="fade-up" data-aos-duration="1000">Bem-vindo ao meu Portfólio</h2>
-      <button class="btn-hero" onclick="document.querySelector('#linguagens').scrollIntoView({behavior:'smooth'})" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">Explorar Portfólio</button>
-    </section>
-
-    <!-- Linguagens -->
-    <section id="linguagens" class="section">
-      <h2 data-aos="fade-down" data-aos-duration="800">Linguagens de Programação</h2>
-      <div class="logos">
-        <div class="logo-item" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
-          <p>C</p>
-          <div class="descricao">Base da programação, me ensinou lógica e controle de baixo nível.</div>
-        </div>
-        <div class="logo-item" data-aos="flip-left" data-aos-duration="800" data-aos-delay="150">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
-          <p>C#</p>
-          <div class="descricao">Linguagem moderna, uso para aplicações desktop e jogos.</div>
-        </div>
-        <div class="logo-item" data-aos="flip-left" data-aos-duration="800" data-aos-delay="200">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-          <p>JavaScript</p>
-          <div class="descricao">Essencial para web, trouxe interatividade aos meus sites.</div>
-        </div>
-        <div class="logo-item" data-aos="flip-left" data-aos-duration="800" data-aos-delay="250">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-          <p>HTML5</p>
-          <div class="descricao">Estrutura da web, onde tudo começa.</div>
-        </div>
-        <div class="logo-item" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-          <p>CSS3</p>
-          <div class="descricao">Responsável pelo estilo e beleza dos meus projetos.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projetos -->
-    <section id="projetos" class="section">
-      <h2 data-aos="fade-down" data-aos-duration="800">Projetos</h2>
-      <div class="projetos">
-        <div class="projeto-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-          <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Site">
-          <p>Site</p>
-          <div class="descricao">Meu primeiro contato com desenvolvimento web, abriu portas para minha criatividade.</div>
-        </div>
-        <div class="projeto-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
-          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Robô Futurista">
-          <p>Robô Seguidor de Linha</p>
-          <div class="descricao">Primeiro projeto da faculdade, marcou minha entrada na robótica e despertou meu interesse por automação.</div>
-        </div>
-        <div class="projeto-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-          <img src="https://cdn-icons-png.flaticon.com/512/2721/2721290.png" alt="Pilha">
-          <p>Pilha</p>
-          <div class="descricao">Exercício de lógica e organização de dados, me ensinou disciplina.</div>
-        </div>
-        <div class="projeto-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
-          <img src="https://cdn-icons-png.flaticon.com/512/2721/2721289.png" alt="Fila">
-          <p>Fila</p>
-          <div class="descricao">Estrutura fundamental, me mostrou como organizar processos.</div>
-        </div>
-        <div class="projeto-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
-          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Organização">
-          <p>Organização de Dados</p>
-          <div class="descricao">Projeto que consolidou meu aprendizado em algoritmos.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Linha do tempo -->
-    <section id="timeline" class="section">
-      <h2 data-aos="fade-down" data-aos-duration="800">Linha do Tempo</h2>
-      <div class="timeline">
-        <div class="event" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
-          <h3>2025 - Ingresso na Faculdade</h3>
-          <p>Início da jornada acadêmica em tecnologia.</p>
-        </div>
-        <div class="event" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
-          <h3>2025 - Primeiro Projeto</h3>
-          <p>Robô seguidor de linha, meu marco inicial.</p>
-        </div>
-        <div class="event" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
-          <h3>2026 - Estruturas de Dados</h3>
-          <p>Implementação de pilha e fila.</p>
-        </div>
-        <div class="event" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
-          <h3>2026 - Organização de Dados</h3>
-          <p>Projeto focado em algoritmos e eficiência.</p>
-        </div>
-        <div class="event" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">
-          <h3>2026 - Em progresso...</h3>
-          <p>Novos projetos misteriosos estão por vir.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Contato -->
     <section id="contato" class="section section-contact">
       <h2 data-aos="fade-down" data-aos-duration="800">Contato</h2>
       <div class="contato-links" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
         <a href="https://github.com/gilgomeshl" target="_blank" class="contact-btn">GitHub</a>
         <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" class="contact-btn">LinkedIn</a>
+        <button onclick="downloadCurriculo()" class="contact-btn contact-btn-pdf">📥 Baixar Currículo PDF</button>
+      </div>
+      <div id="curriculo-content" style="display:none;">
+        <h1>Gilmar Gomes</h1>
+        <p><strong>19 anos | Estudante de Engenharia de Computação</strong></p>
+        <hr>
+        <h2>Linguagens de Programação</h2>
+        <ul>
+          <li><strong>C:</strong> Base da programação, lógica e controle de baixo nível</li>
+          <li><strong>C#:</strong> Aplicações desktop e jogos</li>
+          <li><strong>JavaScript:</strong> Desenvolvimento web</li>
+          <li><strong>HTML5:</strong> Estrutura web</li>
+          <li><strong>CSS3:</strong> Estilo e design</li>
+        </ul>
+        <h2>Projetos</h2>
+        <ul>
+          <li><strong>Site:</strong> Primeiro contato com desenvolvimento web</li>
+          <li><strong>Robô Seguidor de Linha:</strong> Primeiro projeto da faculdade</li>
+          <li><strong>Pilha:</strong> Estrutura de dados</li>
+          <li><strong>Fila:</strong> Estrutura de dados</li>
+          <li><strong>Organização de Dados:</strong> Algoritmos e eficiência</li>
+        </ul>
+        <h2>Linha do Tempo</h2>
+        <ul>
+          <li><strong>2025:</strong> Ingresso na Faculdade e Primeiro Projeto</li>
+          <li><strong>2026:</strong> Estruturas de Dados e Organização de Dados</li>
+        </ul>
+        <h2>Contato</h2>
+        <ul>
+          <li>GitHub: https://github.com/gilgomeshl</li>
+          <li>LinkedIn: https://www.linkedin.com/</li>
+        </ul>
       </div>
     </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2026 Gilmar Gomes - Todos os direitos reservados</p>
-  </footer>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
