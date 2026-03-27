@@ -1,51 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <title>Curriculum Vitae</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <!-- Contato -->
-    <section id="contato" class="section section-contact">
-      <h2 data-aos="fade-down" data-aos-duration="800">Contato</h2>
-      <div class="contato-links" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <a href="https://github.com/gilgomeshl" target="_blank" class="contact-btn">GitHub</a>
-        <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" class="contact-btn">LinkedIn</a>
-        <button onclick="downloadCurriculo()" class="contact-btn contact-btn-pdf">📥 Baixar Currículo PDF</button>
-      </div>
-      <div id="curriculo-content" style="display:none;">
-        <h1>Gilmar Gomes</h1>
-        <p><strong>19 anos | Estudante de Engenharia de Computação</strong></p>
-        <hr>
-        <h2>Linguagens de Programação</h2>
+    <header>
+        <h1>Curriculum Vitae</h1>
+        <h2>Gilmar Gomes</h2>
+        <p>Age: 19</p>
+        <p>Student of Computer Engineering</p>
+    </header>
+    <section>
+        <h2>Programming Languages</h2>
         <ul>
-          <li><strong>C:</strong> Base da programação, lógica e controle de baixo nível</li>
-          <li><strong>C#:</strong> Aplicações desktop e jogos</li>
-          <li><strong>JavaScript:</strong> Desenvolvimento web</li>
-          <li><strong>HTML5:</strong> Estrutura web</li>
-          <li><strong>CSS3:</strong> Estilo e design</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>JavaScript</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
         </ul>
-        <h2>Projetos</h2>
-        <ul>
-          <li><strong>Site:</strong> Primeiro contato com desenvolvimento web</li>
-          <li><strong>Robô Seguidor de Linha:</strong> Primeiro projeto da faculdade</li>
-          <li><strong>Pilha:</strong> Estrutura de dados</li>
-          <li><strong>Fila:</strong> Estrutura de dados</li>
-          <li><strong>Organização de Dados:</strong> Algoritmos e eficiência</li>
-        </ul>
-        <h2>Linha do Tempo</h2>
-        <ul>
-          <li><strong>2025:</strong> Ingresso na Faculdade e Primeiro Projeto</li>
-          <li><strong>2026:</strong> Estruturas de Dados e Organização de Dados</li>
-        </ul>
-        <h2>Contato</h2>
-        <ul>
-          <li>GitHub: https://github.com/gilgomeshl</li>
-          <li>LinkedIn: https://www.linkedin.com/</li>
-        </ul>
-      </div>
     </section>
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Timeline</h2>
+        <p>Details about timeline...</p>
+    </section>
+    <section class="contact">
+        <h2>Contact</h2>
+        <a href="#" class="btn" onclick="downloadPDF()">Download PDF Curriculum</a>
+    </section>
+    <script>
+        function downloadPDF() {
+            const pdfContent = `\
+            \# Curriculum Vitae\
+            Name: Gilmar Gomes\
+            Age: 19\
+            Student of Computer Engineering\
+            Programming Languages: C, C#, JavaScript, HTML5, CSS3\
+            Projects: Project 1, Project 2, Project 3\
+            Contact Links: [Your Contact Links]`;
+
+            const blob = new Blob([pdfContent], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Curriculum_Vitae_Gilmar_Gomes.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
 </body>
 </html>
